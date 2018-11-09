@@ -8,7 +8,9 @@ console.log("connected to burger.js");
 var burger = {
     all: function(cb) {
         orm.all("burgers", function(res){
+            console.log(res);
             cb(res);
+
         });
     },
     // variables cols and cals are arrays
