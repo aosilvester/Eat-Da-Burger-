@@ -1,6 +1,6 @@
 // REQUIREMENTS
 var express = require("express");
-    // bodyparser?
+var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
 
 // APP VARIABLE tells node that we are creating an express server
@@ -11,6 +11,7 @@ var PORT = process.env.PORT || 8080;
 
 // Parse app body as JSON
 app.use(express.static("public"));
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());

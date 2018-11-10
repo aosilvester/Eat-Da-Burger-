@@ -16,16 +16,26 @@ router.get("/", function(req, res) {
       var hbsObject = {
         burger: data
       };
+      console.log(`
+===============================================      
+        hbsObject is next
+===============================================
+      `);
       console.log(hbsObject);
+            console.log(`
+===============================================      
+        hbsObject end
+===============================================
+      `);
       res.render("index", hbsObject);
     });
   });
 
 router.post("/api/burger", function(req, res) {
   burger.create([
-    "name", "sleepy"
+    "burger_name", "devoured"
   ], [
-    req.body.name, req.body.sleepy
+    req.body.name, req.body.devoured
   ], function(result) {
     // Send back the ID of the new quote
     res.json({ id: result.insertId });
@@ -34,9 +44,17 @@ router.post("/api/burger", function(req, res) {
 
 router.put("/api/burger/:id", function(req, res) {
     var condition = "id = " + req.params.id;
-  
+        console.log(`
+===============================================      
+        condition
+===============================================
+      `);
     console.log("condition ", condition);
-  
+        console.log(`
+===============================================      
+        condition
+===============================================
+      `);
     burger.update({
       devoured: req.body.devoured
     }, condition, function(result) {
