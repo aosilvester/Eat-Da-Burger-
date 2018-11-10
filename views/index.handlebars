@@ -10,15 +10,23 @@
         <h3>Uneaten</h3>
         {{#each burger}}
         {{#unless devoured}}
-          <div>{{burger_name}}</div>
+          <div>
+            {{burger_name}}
+        <button class="changeDevour" data-id="{{id}}" >devour it</button>
+
+          </div>
         {{/unless}}
         {{/each}}
       </table>
     </div>
     <div class="col-md-5 col-right">
-      {{#each burgers}}
+      <h3>Devoured</h3>
+      {{#each burger}}
       {{#if devoured}}
-      <div>{{id}}. {{burger_name}}</div>
+      <div>
+        {{burger_name}}
+        <button class="makeMore" data-id="{{id}}">make another</button>
+      </div>
       {{/if}}
       {{/each}}
     </div>

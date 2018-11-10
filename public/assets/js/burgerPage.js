@@ -37,14 +37,30 @@ $(".delete-sleep").on("click", function(event) {
     });
 }); 
 
-$(".change-devour").on("click", function(event) {
+$(".changeDevour").on("click", function(event) {
     var id = $(this).data("id");
-
+    console.log("devouring a burger");
     var newState = {
         devoured: true
     };
 
-    $.ajax("/api/burgers/" + id, {
+    $.ajax("/api/burger/" + id, {
+        type: "PUT",
+        data: newState
+    }).then(function() {
+
+        location.reload();  
+    });
+});
+
+$(".makeMore").on("click", function(event) {
+    var id = $(this).data("id");
+    console.log("making a burger");
+    var newState = {
+        devoured: false,
+    };
+
+    $.ajax("/api/burger/" + id, {
         type: "PUT",
         data: newState
     }).then(function() {
@@ -52,6 +68,9 @@ $(".change-devour").on("click", function(event) {
         location.reload();
     });
 });
+
+
+// end of jQuery function
 })
 
 
