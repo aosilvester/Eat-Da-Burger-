@@ -2,17 +2,14 @@
 
 ## Description
 
-* **What is Friend Finder?**
-Friend Finder is a full stack website designed to 
+* **What is Eat-Da-Burger?**
+Eat-Da-Burger is a full stack website that demonstrates node express handlebars web conventions under the theme of making and eating burgers.
 
-* **How Does Friend Finder Work?**
-The user answers the questions presented to them, and includes their name and picture. When the user submits their survey, their best match is presented to them.
-
-* **Target Audience of Friend Finder**
-The target audience is anybody who wants to find friends
+* **How Does Eat-Da-Burger Work?**
+The user is presented with the list of burger, both ready and those that have been devoured. The user can select any burger and either devour it or make it again. Additionally, the user is able to create new burgers at any time.
 
 * **Purpose of the Project**
-The purpose of this project is to demonstrate knowledge of express.js and back end server distribution of information and API functionality
+The purpose of this project is to demonstrate knowledge of node express handlebars
 
 ## Getting Started
 
@@ -34,7 +31,7 @@ If there are any problems or issues with this app, please contact the author.
 
 ## Authors
 
-Friend Finder was developed by Alex Silvester in 2018
+Eat-Da-Burger was developed by Alex Silvester in 2018
 
 You may contact Alex via email at (aosilvester@gmail.com) with any questions.
 
