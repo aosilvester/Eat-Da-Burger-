@@ -16,9 +16,10 @@ USE burgers_db;
         -- devoured (boolean)
 
 CREATE TABLE burgers (
-  id INT NOT NULL AUTO_INCREMENT,
+  id INT AUTO_INCREMENT NOT NULL,
   burger_name VARCHAR (100) NOT NULL,
   devoured boolean DEFAULT false,
+  createdAt TIMESTAMP NOT NULL default CURRENT_TIMESTAMP,
   PRIMARY KEY (id) 
 );
 
