@@ -1,6 +1,6 @@
 -- create burgers_db
 
-
+-- be sure to include jawsdb database name in final release
 
 DROP DATABASE IF EXISTS burgers_db;
 CREATE DATABASE burgers_db;        
